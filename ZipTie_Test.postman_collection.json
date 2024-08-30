@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "a5a92205-116b-4c67-9657-211242a9392d",
+		"name": "ZipTie_Test",
+		"description": "This is a collection of APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Author",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jerry\",\r\n    \"email\": \"jerry12@gmail.com\",\r\n    \"birthdate\": \"20224-09-01\",\r\n    \"bio\": \"I am Jerry!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/authors/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"authors",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Author",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tom\",\r\n    \"email\": \"tom12@gmail.com\",\r\n    \"birthdate\": \"2024-08-30\",\r\n    \"bio\": \"I am Tom!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/authors/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"authors",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Create Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Gone with the Wind\",\r\n    \"year\": 1936,\r\n    \"isbn\": \"9781451635621\",\r\n    \"author_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/books/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"books",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/authors/1/books",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"authors",
+						"1",
+						"books"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "127.0.0.1:8000"
+		}
+	]
+}

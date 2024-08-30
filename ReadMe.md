@@ -16,7 +16,7 @@ Before you start, ensure you have the following installed:
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/ziptie/fastapi_test.git
+git clone https://github.com/ziptie_fastapi_test.git
 cd fastapi_test
 ```
 ### 2. Set Up the Virtual Environment
